@@ -1,0 +1,7 @@
+@keyframes smallHop {
+  to {
+    transform: translateY(-1%);
+  }
+}
+
+/*# sourceMappingURL=animations.css.map */

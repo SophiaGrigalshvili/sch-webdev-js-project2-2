@@ -1,0 +1,139 @@
+@keyframes smallHop {
+  to {
+    transform: translateY(-1%);
+  }
+}
+main {
+  padding-top: 60px;
+  font-size: 16px;
+}
+
+.heroSect {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 70px;
+  row-gap: 30px;
+  background-color: #fbfcfd;
+}
+.heroSect h2 {
+  font-size: 50px;
+  font-family: sans-serif;
+  color: #1e293b;
+  font-weight: 600;
+}
+.heroSect > p {
+  color: #5a6575;
+  font-family: sans-serif;
+  font-size: 18px;
+}
+
+.hotelsSect {
+  padding: 6%;
+}
+.hotelsSect .exploreDiv {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.hotelsSect .exploreDiv .filersBtn {
+  font-size: 16px;
+  background-color: #f8fafc;
+  color: #475569;
+  border: 1px solid #f8fafc;
+  border-radius: 50px;
+  padding: 5px 14px;
+  cursor: pointer;
+}
+.hotelsSect .exploreDiv .filersBtnActive {
+  font-size: 16px;
+  background-color: #f1f5f9;
+  border: 1px solid #dee1e5;
+  color: #1e293b;
+  border-radius: 50px;
+  padding: 5px 14px;
+  cursor: pointer;
+}
+.hotelsSect .hotelscont {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 3.3%;
+  row-gap: 18px;
+}
+.hotelsSect .hotelscont > a {
+  width: 31%;
+  text-decoration: none;
+  transition: 0.5s;
+}
+.hotelsSect .hotelscont > a .card {
+  border: 1px solid #bfd3de;
+  border-radius: 15px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  position: relative;
+  box-shadow: 1px 1px 10px 4px rgba(0, 0, 0, 0.066);
+  transition: 0.4s;
+}
+.hotelsSect .hotelscont > a .card .imgDiv {
+  width: 100%;
+  height: 16vw;
+  overflow: hidden;
+}
+.hotelsSect .hotelscont > a .card .imgDiv .image {
+  width: 100%;
+  height: 16vw;
+  object-fit: cover;
+  transition: 0.3s;
+}
+.hotelsSect .hotelscont > a .card h3 {
+  color: #1e293b;
+  font-family: sans-serif;
+  font-size: 19px;
+  padding-left: 18px;
+}
+.hotelsSect .hotelscont > a .card .rev {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 18px 15px 18px;
+  color: #5a6575;
+  font-family: sans-serif;
+  font-size: 16px;
+}
+.hotelsSect .hotelscont > a .card .rev > div i {
+  color: #f59e0b;
+}
+.hotelsSect .hotelscont > a .card .hotStars {
+  display: flex;
+  color: #f59e0b;
+  position: absolute;
+  top: 7px;
+  left: 7px;
+  background-color: rgba(12, 18, 25, 0.7764705882);
+  padding: 2px 6px;
+  border-radius: 6px;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  z-index: 4;
+}
+.hotelsSect .hotelscont > a .card .hotStars i {
+  font-size: 10px;
+  padding-top: 2px;
+}
+.hotelsSect .hotelscont > a .card .hotStars p {
+  font-weight: 700;
+}
+.hotelsSect .hotelscont > a .card:hover {
+  box-shadow: 1px 1px 30px 9px rgba(0, 0, 0, 0.127);
+  bottom: 1px;
+  transition: 0.5s;
+}
+.hotelsSect .hotelscont > a .card:hover .image {
+  scale: 105%;
+}
+
+/*# sourceMappingURL=index.css.map */

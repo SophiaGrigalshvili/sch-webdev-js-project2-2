@@ -1,0 +1,292 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  font-size: 16px;
+  font-family: sans-serif;
+  height: 100%;
+}
+.asideSect {
+  background: #111928;
+  background: radial-gradient(
+    circle,
+    rgb(18, 30, 52) 8%,
+    rgba(12, 16, 23, 1) 70%
+  );
+  width: 50%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+
+  color: white;
+  .titles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    row-gap: 37px;
+
+    > div {
+      background-color: #1170ff;
+      border-radius: 13px;
+      padding: 20px 18px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      font-size: 33px;
+      box-shadow: 1px 1px 20px 5px #1170ff55;
+    }
+
+    h2 {
+      font-size: 50px;
+      font-weight: 800;
+    }
+
+    p {
+      width: 70%;
+      font-size: 19px;
+      letter-spacing: 0.8px;
+      opacity: 65%;
+    }
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+
+    > div {
+      display: flex;
+      gap: 17px;
+
+      .iconDiv {
+        padding: 15px;
+        background-color: rgba(255, 255, 255, 0.175);
+        border-radius: 18px;
+
+        i {
+          color: #1170ff;
+        }
+      }
+
+      .textDiv {
+        display: flex;
+        flex-direction: column;
+        row-gap: 8px;
+
+        h3 {
+          font-size: 18px;
+          font-weight: 800;
+        }
+
+        p {
+          font-size: 14px;
+          letter-spacing: 0.8px;
+          opacity: 65%;
+        }
+      }
+    }
+  }
+}
+
+.formSect {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 100%;
+
+  gap: 28px;
+
+  .topDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 18px;
+
+    > a {
+      margin-bottom: 10px;
+      button {
+        color: #0066ff;
+        background-color: #f8fafc;
+        border: 2px solid #b4d2fd;
+        box-shadow: 1px 1px 5px 1px #b4d2fd6f;
+
+        font-size: 30px;
+        font-weight: 100;
+        padding: 10px;
+        border-radius: 14px;
+
+        transition: 0.2s;
+
+        &:hover {
+          box-shadow: 1px 1px 15px 1px #b4d2fddf;
+          background-color: #f0f4f9;
+          cursor: pointer;
+        }
+      }
+    }
+
+    h2 {
+      color: #1e293b;
+      font-size: 40px;
+      font-weight: 700;
+    }
+
+    p {
+      color: #515e71;
+      font-size: 17px;
+      width: 70%;
+      text-align: center;
+    }
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+
+    gap: 20px;
+
+    .names {
+      display: flex;
+      gap: 3%;
+
+      input {
+        width: 50%;
+      }
+    }
+
+    input {
+      padding: 14px;
+      background-color: #f8fafc;
+      border: 1px solid #ced8e4;
+      border-radius: 8px;
+    }
+
+    .sumbitBtn {
+      background-color: #0066ff;
+      color: white;
+      padding: 18px;
+      box-shadow: 1px 2px 6px 2px #0066ff47;
+
+      transition: 0.2s;
+
+      font-weight: 600;
+
+      &:hover {
+        cursor: pointer;
+        position: relative;
+        bottom: 2px;
+        background-color: #1f77fb;
+        box-shadow: 1px 4px 5px 3px #0066ff53;
+      }
+    }
+
+    > div {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 2px;
+
+      div {
+        cursor: pointer;
+        label {
+          cursor: pointer;
+          color: #515e71;
+        }
+
+        input {
+          cursor: pointer;
+        }
+      }
+
+      a {
+        text-decoration: none;
+        color: #0066ff;
+        text-transform: capitalize;
+      }
+    }
+  }
+
+  .divider {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 13px;
+    div {
+      height: 1px;
+      width: 28%;
+      background-color: #ced8e4df;
+    }
+
+    p {
+      color: #9aa3af;
+    }
+  }
+
+  .signUpDiv {
+    p {
+      color: #515e71;
+      font-size: 15px;
+      span {
+        a {
+          color: #0066ff;
+          text-decoration: none;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .asideSect {
+    display: none;
+  }
+
+  .formSect {
+    width: 100%;
+
+    form {
+      width: 50%;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  form {
+    width: 70% !important;
+  }
+  .rememberDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .names {
+    flex-direction: column;
+    gap: 20px !important;
+    input {
+      width: 100% !important;
+    }
+  }
+}
