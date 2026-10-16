@@ -18,8 +18,7 @@ fetch(`${BASE_URL}/api/hotels/${paramid}`)
     console.log(`hotel info:`, hotel);
 
     appendHotInfo(hotel);
-    getRooms();
-    displayRooms();
+    // getRooms();
   });
 
 function appendHotInfo(data) {
@@ -100,48 +99,71 @@ function displayPhoto(id) {
   });
 }
 
-function getRooms() {
-  fetch(`${BASE_URL}/api/rooms/${paramid}`)
-    .then((res) => {
-      if (!res.ok) {
-        throw new Error((error) => console.log(error));
-      }
-      return res.json();
-    })
-    .then((data) => {
-      const rooms = data.data.items;
-      console.log(`rooms:`, rooms);
-    });
-}
+fetch(`${BASE_URL}/api/rooms/${paramid}`)
+  .then((res) => {
+    if (!res.ok) {
+      throw new Error((error) => console.log(error));
+    }
+    return res.json();
+  })
+  .then((data) => {
+    const rooms = data.data.items;
+    console.log(`rooms:`, rooms);
+    displayRooms(rooms);
+  });
 
-function displayRooms(room) {
+function displayRooms(data) {
   const roomsSect = document.getElementById("roomsSect");
 
-  room.foreach((el) => {
+  data.forEach((el) => {
     roomsSect.innerHTML += `
-     <div class="roomCard">
-          <div class="imgDiv">
-            <img src="" alt="" />
+     <a href="/HTML/rooms.html?id=${el.id}">
+        <div class="roomCard ${el.id}" id="${el.id}">
+          <div class="isAvailableDiv" id="isAvailableDiv ${el.id}">
+            <p id="availibility ${el.id}"> </p>
           </div>
-
-          <div class="titleDiv">
-            <h3></h3>
-            <p></p>
-          </div>
-
-          <div class="infoDiv">
-            <p>👤</p>
-            <p>🛏</p>
-            <span>
-              <i class="fa fa-solid fa-star"></i>
-              <p></p>
-            </span>
-          </div>
-
-          <h4><span>/night</span></h4>
-
-          <a href=""><button>Book Now</button></a>
+          
+        <div class="imgDiv">
+            <img src="${el.thumbnail}" alt="${el.roomType}" />
         </div>
+        <div class="TextContent">
+            <div class="titleDiv">
+                <h3>${el.roomType}</h3>
+                <p>#${el.roomNumber}</p>
+            </div>
+
+            <div class="infoDiv">
+                <p>👤 ${el.capacity}</p>
+                <p>🛏 ${el.bedCount}</p>
+                <span>
+                    <i class="fa fa-solid fa-star"></i>
+                    <p>${el.averageRating}</p>
+                </span>
+            </div>
+
+            <h4>$${el.pricePerNight}<span> / night</span></h4>
+
+            <button id="BookingBtn">Book Now</button>
+            </div>
+        </div>
+     </a>
     `;
+
+    //MAKE BUTTON GO TO BOOKING PAGE!!!!!!!!!!!!!!!!!!!!!
+
+    let roomId = document.getElementById(el.id);
+    let id = el.id;
+
+    if (roomId.classList.contains(`${id}`)) {
+      let availibility = document.getElementById(`availibility ${id}`);
+      let isAvailableDiv = document.getElementById(`isAvailableDiv ${id}`);
+      if (el.isAvailable == true) {
+        availibility.textContent = "Available";
+        isAvailableDiv.style.backgroundColor = "#10B981";
+      } else {
+        availibility.textContent = "Not Available";
+        isAvailableDiv.style.backgroundColor = "#ec3939";
+      }
+    }
   });
 }

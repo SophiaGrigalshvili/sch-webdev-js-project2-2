@@ -151,4 +151,124 @@ main {
   border-radius: 20px;
 }
 
+.rooms {
+  display: grid;
+  grid-template-columns: repeat(4, 23%);
+  column-gap: 2%;
+  row-gap: 1.8vw;
+}
+.rooms > a {
+  position: relative;
+  transition: 0.5s;
+  text-decoration: none;
+}
+.rooms > a .roomCard {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #bfd3de;
+  box-shadow: 1px 1px 10px 4px rgba(0, 0, 0, 0.066);
+  border-radius: 14px;
+  overflow: hidden;
+  position: relative;
+}
+.rooms > a .roomCard .isAvailableDiv {
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  z-index: 8;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+.rooms > a .roomCard .imgDiv {
+  width: 100%;
+  height: 13.7vw;
+  overflow: hidden;
+}
+.rooms > a .roomCard .imgDiv img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: 0.2s;
+}
+.rooms > a .roomCard .TextContent {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  padding: 14px;
+}
+.rooms > a .roomCard .TextContent .titleDiv {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.rooms > a .roomCard .TextContent .titleDiv h3 {
+  color: #1e293b;
+  font-size: 20px;
+}
+.rooms > a .roomCard .TextContent .titleDiv p {
+  color: #b5b9bd;
+  background-color: #f8fafc;
+  font-size: 14px;
+  padding: 3px 5px;
+  border-radius: 5px;
+}
+.rooms > a .roomCard .TextContent .infoDiv {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  color: #414854;
+  font-size: 15px;
+}
+.rooms > a .roomCard .TextContent .infoDiv span {
+  margin-top: 3px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.rooms > a .roomCard .TextContent .infoDiv span i {
+  color: #f59e0b;
+  font-size: 13px;
+}
+.rooms > a .roomCard .TextContent h4 {
+  color: #1e293b;
+  font-size: 23px;
+}
+.rooms > a .roomCard .TextContent h4 span {
+  font-size: 15px;
+  color: #636e7e;
+  font-weight: 100;
+}
+.rooms > a .roomCard .TextContent button {
+  width: 100%;
+  background-color: #0c6dff;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  position: relative;
+  z-index: 4;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.rooms > a .roomCard .TextContent button:hover {
+  bottom: 1px;
+  background-color: #3f88f7;
+  box-shadow: 1px 1px 10px 4px rgba(63, 137, 247, 0.2666666667);
+}
+.rooms > a .roomCard:hover {
+  box-shadow: 1px 1px 30px 9px rgba(0, 0, 0, 0.127);
+  transition: 0.2s;
+}
+.rooms > a .roomCard:hover img {
+  scale: 105%;
+}
+.rooms > a:hover {
+  bottom: 1px;
+}
+
 /*# sourceMappingURL=hotels.css.map */

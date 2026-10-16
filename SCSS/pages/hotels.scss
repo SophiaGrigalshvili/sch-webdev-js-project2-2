@@ -173,3 +173,144 @@ main {
     border-radius: 20px;
   }
 }
+
+.rooms {
+  display: grid;
+  grid-template-columns: repeat(4, 23%);
+  column-gap: 2%;
+  row-gap: 1.8vw;
+  > a {
+    position: relative;
+    transition: 0.5s;
+    text-decoration: none;
+    .roomCard {
+      display: flex;
+      flex-direction: column;
+
+      border: 1px solid #bfd3de;
+      box-shadow: 1px 1px 10px 4px rgba(0, 0, 0, 0.066);
+
+      border-radius: 14px;
+
+      overflow: hidden;
+
+      position: relative;
+      .isAvailableDiv {
+        position: absolute;
+        top: 7px;
+        right: 7px;
+        z-index: 8;
+
+        color: white;
+        font-size: 15px;
+        font-weight: 600;
+
+        padding: 5px 10px;
+        border-radius: 10px;
+      }
+
+      .imgDiv {
+        width: 100%;
+        height: 13.7vw;
+        overflow: hidden;
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+          transition: 0.2s;
+        }
+      }
+      .TextContent {
+        display: flex;
+        flex-direction: column;
+
+        gap: 11px;
+        padding: 14px;
+
+        .titleDiv {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          h3 {
+            color: #1e293b;
+            font-size: 20px;
+          }
+
+          p {
+            color: #b5b9bd;
+            background-color: #f8fafc;
+            font-size: 14px;
+            padding: 3px 5px;
+            border-radius: 5px;
+          }
+        }
+
+        .infoDiv {
+          display: flex;
+          align-items: center;
+          gap: 11px;
+
+          color: #414854;
+          font-size: 15px;
+
+          span {
+            margin-top: 3px;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+
+            i {
+              color: #f59e0b;
+              font-size: 13px;
+            }
+          }
+        }
+
+        h4 {
+          color: #1e293b;
+          font-size: 23px;
+          span {
+            font-size: 15px;
+            color: #636e7e;
+            font-weight: 100;
+          }
+        }
+
+        button {
+          width: 100%;
+          background-color: #0c6dff;
+          color: white;
+          border: none;
+          border-radius: 10px;
+          padding: 10px;
+
+          position: relative;
+          z-index: 4;
+
+          font-size: 15px;
+          font-weight: 600;
+
+          cursor: pointer;
+          transition: 0.4s;
+          &:hover {
+            bottom: 1px;
+            background-color: #3f88f7;
+            box-shadow: 1px 1px 10px 4px #3f89f744;
+          }
+        }
+      }
+
+      &:hover {
+        box-shadow: 1px 1px 30px 9px rgba(0, 0, 0, 0.127);
+
+        transition: 0.2s;
+        img {
+          scale: 105%;
+        }
+      }
+    }
+    &:hover {
+      bottom: 1px;
+    }
+  }
+}
