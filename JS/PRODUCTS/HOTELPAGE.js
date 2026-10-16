@@ -15,9 +15,11 @@ fetch(`${BASE_URL}/api/hotels/${paramid}`)
   .then((data) => {
     const hotel = data.data;
 
-    console.log(hotel);
+    console.log(`hotel info:`, hotel);
 
     appendHotInfo(hotel);
+    getRooms();
+    displayRooms();
   });
 
 function appendHotInfo(data) {
@@ -95,5 +97,51 @@ function displayPhoto(id) {
   delBtn.addEventListener("click", () => {
     const lightBox = document.getElementById("lightBox");
     lightBox.remove();
+  });
+}
+
+function getRooms() {
+  fetch(`${BASE_URL}/api/rooms/${paramid}`)
+    .then((res) => {
+      if (!res.ok) {
+        throw new Error((error) => console.log(error));
+      }
+      return res.json();
+    })
+    .then((data) => {
+      const rooms = data.data.items;
+      console.log(`rooms:`, rooms);
+    });
+}
+
+function displayRooms(room) {
+  const roomsSect = document.getElementById("roomsSect");
+
+  room.foreach((el) => {
+    roomsSect.innerHTML += `
+     <div class="roomCard">
+          <div class="imgDiv">
+            <img src="" alt="" />
+          </div>
+
+          <div class="titleDiv">
+            <h3></h3>
+            <p></p>
+          </div>
+
+          <div class="infoDiv">
+            <p>👤</p>
+            <p>🛏</p>
+            <span>
+              <i class="fa fa-solid fa-star"></i>
+              <p></p>
+            </span>
+          </div>
+
+          <h4><span>/night</span></h4>
+
+          <a href=""><button>Book Now</button></a>
+        </div>
+    `;
   });
 }

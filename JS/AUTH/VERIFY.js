@@ -24,9 +24,12 @@ verifForm.addEventListener("submit", async (event) => {
 
     if (!responce.ok) {
       throw new Error("error");
+
+      //make popup appear here
     }
 
     console.log(verification);
+    const data = await responce.json();
 
     localStorage.setItem("accessToken", data.data.accessToken);
     localStorage.setItem("refreshToken", data.data.refreshToken);
@@ -55,8 +58,6 @@ resendBtn.addEventListener("click", async (event) => {
 
     if (!responce.ok) {
       throw new Error("error");
-
-      //write the error popup here
     }
 
     const data = await responce.json();
