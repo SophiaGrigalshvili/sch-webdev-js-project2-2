@@ -42,7 +42,12 @@ header > a > div {
 header > a > div i {
   color: white;
 }
-header > div > button {
+header .burgMenu {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+header .burgMenu .signInBtn {
   border: none;
   background-color: #0e6eff;
   padding: 9px 22px;
@@ -50,13 +55,21 @@ header > div > button {
   position: relative;
   transition: 0.5s;
 }
-header > div > button a {
+header .burgMenu .signInBtn a {
   color: white;
   text-decoration: none;
 }
-header > div > button:hover {
+header .burgMenu .signInBtn:hover {
   bottom: 1px;
   background-color: #2d7ef9;
+}
+header .burgMenu .burger {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 27px;
+  color: #1e293b;
+  display: none;
 }
 
 /*# sourceMappingURL=main.css.map */

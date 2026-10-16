@@ -20,7 +20,7 @@ function makeCard(data) {
   data.forEach((el) => {
     let userStarRating = el.averageRating;
     container.innerHTML += `
-       <a href="">
+       <a href="/HTML/hotels.html?id=${el.id}">
         <div class="card">
          <div class="hotStars">
             <p>${el.starRating}</p>

@@ -47,8 +47,13 @@ header {
     }
   }
 
-  > div {
-    > button {
+  .burgMenu {
+    display: flex;
+
+    gap: 20px;
+    align-items: center;
+
+    .signInBtn {
       border: none;
       background-color: #0e6eff;
       padding: 9px 22px;
@@ -65,6 +70,16 @@ header {
         bottom: 1px;
         background-color: #2d7ef9;
       }
+    }
+
+    .burger {
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      font-size: 27px;
+      color: #1e293b;
+
+      display: none;
     }
   }
 }

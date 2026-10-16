@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hotel</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="/CSS/pages/main.css" />
+    <link rel="stylesheet" href="/CSS/pages/hotels.css" />
+  </head>
+  <body>
+    <header>
+      <a href="index.html">
+        <div>
+          <i class="fa fa-solid fa-suitcase"></i>
+        </div>
+        <h2>STEP BOOKING</h2>
+      </a>
+
+      <div class="nav" id="loggedOut">
+        <div class="burgMenu">
+          <button class="signInBtn">
+            <a href="/HTML/auth/signup.html">Sign In</a>
+          </button>
+
+          <button class="burger">
+            <i class="fa fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="photoSect">
+        <div class="thumbnail">
+          <img src="" alt="thumbnail image" id="thumbnail" />
+        </div>
+        <div class="gridDiv">
+          <img src="" alt="photo 1" id="photo1" />
+          <img src="" alt="photo 2" id="photo2" />
+          <img src="" alt="photo 3" id="photo3" />
+        </div>
+      </section>
+
+      <section class="infoSect">
+        <aside>
+          <p class="contact">Contact</p>
+          <p id="contactNum"></p>
+          <p id="contactRes"></p>
+        </aside>
+
+        <div class="mainInfo">
+          <div class="hotStars">
+            <p id="hotStar"></p>
+            <i class="fa fa-solid fa-star"></i>
+            <p>Hotel</p>
+          </div>
+
+          <div class="title">
+            <h2 id="hotTitle"></h2>
+            <p id="hotAddress"></p>
+          </div>
+
+          <div class="infoReview">
+            <div class="infoReviewRevDiv">
+              <i class="fa fa-solid fa-star"></i>
+              <p class="infoReviewRev" id="infoReviewRev"></p>
+            </div>
+
+            <p class="infoReviewRooms" id="infoReviewRooms"></p>
+          </div>
+
+          <p class="hotDesc" id="hotDesc"></p>
+        </div>
+      </section>
+    </main>
+  </body>
+  <script type="module" src="/JS/PRODUCTS/HOTELPAGE.js"></script>
+</html>
