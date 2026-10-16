@@ -47,6 +47,11 @@ signInForm.addEventListener("submit", async (event) => {
 
     if (accessTokenVar == "Verification" && refreshTokenVar == "Verification") {
       window.location.href = "/HTML/auth/verification.html";
+    } else if (
+      accessTokenVar == "undefined" &&
+      refreshTokenVar == "undefined"
+    ) {
+      window.location.href = "/HTML/auth/verification.html";
     } else {
       window.location.href = "/HTML/index.html";
     }
