@@ -23,6 +23,7 @@ fetch(`${BASE_URL}/api/hotels/${paramid}`)
 
 function appendHotInfo(data) {
   const photoThumbnail = document.getElementById("thumbnail");
+  
   //----photo sect
   const photo1 = document.getElementById("photo1");
   const photo2 = document.getElementById("photo2");

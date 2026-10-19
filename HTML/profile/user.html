@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="/CSS/pages/main.css" />
+    <link rel="stylesheet" href="/CSS/pages/profile/user.css" />
+  </head>
+  <body>
+    <header>
+      <a href="index.html">
+        <div>
+          <i class="fa fa-solid fa-suitcase"></i>
+        </div>
+        <h2>STEP BOOKING</h2>
+      </a>
+
+      <div class="nav" id="loggedOut">
+        <div class="burgMenu">
+          <button class="signInBtn">
+            <a href="/HTML/auth/signin.html">Sign In</a>
+          </button>
+
+          <button class="burger">
+            <i class="fa fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <aside>
+        <div class="profileSect">
+          <div class="profilePic" id="profilePic"></div>
+          <div class="namesCont">
+            <p id="userNameProf"></p>
+            <p id="emailProf"></p>
+          </div>
+        </div>
+        <div class="navSect">
+          <a
+            href="/HTML/profile/user.html"
+            id="myProfile"
+            class="profileNavInactive"
+          >
+            <div>
+              <div>
+                <!-- icon goes here -->
+              </div>
+              <p>My Profile</p>
+            </div>
+          </a>
+
+          <a
+            href="/HTML/profile/reservations.html"
+            id="myReservations"
+            class="profileNavInactive"
+          >
+            <div>
+              <div>
+                <!-- icon goes here -->
+              </div>
+              <p>Reservations</p>
+            </div>
+          </a>
+
+          <a
+            href="/HTML/profile/settings.html"
+            id="mySettings"
+            class="profileNavInactive"
+          >
+            <div>
+              <div>
+                <!-- icon goes here -->
+              </div>
+              <p>Settings</p>
+            </div>
+          </a>
+        </div>
+        <div class="logoutSect">
+          <a
+            href="/HTML/profile/settings.html"
+            id="logOutBtn"
+            class="logOutBtn"
+          >
+            <div>
+              <div>
+                <!-- icon goes here -->
+              </div>
+              <p>Logout</p>
+            </div>
+          </a>
+        </div>
+      </aside>
+
+      <section>
+        <h2>My Profile</h2>
+        <p>Manage your personal information and preferences</p>
+        <form action="" id="userForm">
+          <div class="pfpSect">
+            <p>
+              <span><!-- icon goes here --></span>
+              Profile Picture
+            </p>
+
+            <div class="changePfpCont">
+              <div class="profilePicSetting" id="formProfilePic">
+                <h3 id="profilePic"></h3>
+              </div>
+
+              <div class="actualInputField">
+                <h3>Upload your photo</h3>
+                <p>Enter a URL to your profile picture</p>
+                <input
+                  type="text"
+                  name=""
+                  id="userPfpLink"
+                  placeholder="https://example.com/avatar.jpg"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="Personal Information">
+            <div class="flexDivs">
+              <div class="names">
+                <label for="firstName"> <span>*</span> First Name </label>
+                <div>
+                  <!-- icon goes here -->
+                  <input type="text" name="firstName" id="userFirstName" />
+                </div>
+
+                <label for="lastName"> <span>*</span> Last Name </label>
+                <div>
+                  <!-- icon goes here -->
+                  <input type="text" name="lastName" id="userLasttName" />
+                </div>
+              </div>
+
+              <div class="emailDiv">
+                <label for="email">Email Address</label>
+                <div>
+                  <!-- icon goes here -->
+                  <input type="email" name="email" id="userEmail" disabled />
+                  <!-- icon goes here -->
+                </div>
+              </div>
+
+              <div class="FlexDivs">
+                <div>
+                  <label for="birthday">Date of Birth</label>
+                  <div>
+                    <!-- icon goes here -->
+                    <input
+                      type="date"
+                      name="birthday"
+                      id="userBirthDate"
+                      placeholder="select your birth date"
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <label for="phone">Phone Number</label>
+                  <div>
+                    <!-- icon goes here -->
+                    <input
+                      type="text"
+                      name="phone"
+                      id="userPhoneNum"
+                      placeholder="+995 555 123 456"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="addressSect">
+            <p>
+              <span><!-- icon goes here --></span> Address
+            </p>
+
+            <div>
+              <label for="address">Street Address</label>
+              <div>
+                <!-- icon goes here -->
+                <input
+                  type="text"
+                  name="address"
+                  id="userAddress"
+                  placeholder="Enter your street address"
+                />
+              </div>
+            </div>
+          </div>
+
+          <button id="DiscardBtn" class="DiscardBtn">X Discard</button>
+          <input type="submit" name="" id="submitBtn" value="✔ Save Changes" />
+        </form>
+      </section>
+    </main>
+  </body>
+  <script type="module" src="/JS/PROFILE/USER.js"></script>
+</html>

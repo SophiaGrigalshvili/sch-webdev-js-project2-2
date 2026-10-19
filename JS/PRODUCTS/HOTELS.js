@@ -17,6 +17,7 @@ fetch(`${BASE_URL}/api/hotels`)
   });
 
 function makeCard(data) {
+  container.innerHTML = "";
   data.forEach((el) => {
     let userStarRating = el.averageRating;
     container.innerHTML += `
@@ -41,6 +42,7 @@ function makeCard(data) {
   });
 }
 
+// filters here v v v
 const filtersBtn = document.getElementById("filtersBtn");
 const filtersMenu = document.getElementById("filtersMenu");
 

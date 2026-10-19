@@ -11,6 +11,7 @@ signInForm.addEventListener("submit", async (event) => {
 
   const signInEmail = signInEmailVal.value.trim().toLowerCase();
   const signInPassword = signInPasswordVal.value.trim();
+
   const user = {
     email: signInEmail,
     password: signInPassword,

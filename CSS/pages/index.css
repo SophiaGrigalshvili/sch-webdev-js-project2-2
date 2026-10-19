@@ -1,8 +1,3 @@
-@keyframes smallHop {
-  to {
-    transform: translateY(-1%);
-  }
-}
 main {
   padding-top: 60px;
   font-size: 16px;
