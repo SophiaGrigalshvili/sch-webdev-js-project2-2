@@ -1,0 +1,217 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  font-size: 16px;
+  font-family: sans-serif;
+  height: 100%;
+}
+
+.asideSect {
+  background: #111928;
+  background: radial-gradient(circle, rgb(18, 30, 52) 8%, rgb(12, 16, 23) 70%);
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  color: white;
+}
+.asideSect .titles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  row-gap: 37px;
+}
+.asideSect .titles > div {
+  background-color: #1170ff;
+  border-radius: 13px;
+  padding: 20px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 33px;
+  box-shadow: 1px 1px 20px 5px rgba(17, 112, 255, 0.3333333333);
+}
+.asideSect .titles h2 {
+  font-size: 50px;
+  font-weight: 800;
+}
+.asideSect .titles p {
+  width: 70%;
+  font-size: 19px;
+  letter-spacing: 0.8px;
+  opacity: 65%;
+}
+.asideSect .info {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+.asideSect .info > div {
+  display: flex;
+  gap: 17px;
+}
+.asideSect .info > div .iconDiv {
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.175);
+  border-radius: 18px;
+}
+.asideSect .info > div .iconDiv i {
+  color: #1170ff;
+}
+.asideSect .info > div .textDiv {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+}
+.asideSect .info > div .textDiv h3 {
+  font-size: 18px;
+  font-weight: 800;
+}
+.asideSect .info > div .textDiv p {
+  font-size: 14px;
+  letter-spacing: 0.8px;
+  opacity: 65%;
+}
+
+.formSect {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  row-gap: 35px;
+  padding: 20px;
+}
+.formSect .iconDiv {
+  color: #0066ff;
+  background-color: #f8fafc;
+  border: 2px solid #b4d2fd;
+  box-shadow: 1px 1px 5px 1px rgba(180, 210, 253, 0.4352941176);
+  font-size: 30px;
+  font-weight: 100;
+  padding: 10px 14px;
+  border-radius: 14px;
+}
+.formSect .topDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-align: center;
+}
+.formSect .topDiv h2 {
+  color: #1e293b;
+  font-size: 40px;
+  font-weight: 700;
+}
+.formSect .topDiv p {
+  color: #515e71;
+  font-size: 17px;
+  text-align: center;
+}
+.formSect form {
+  display: flex;
+  flex-direction: column;
+  width: 65%;
+  row-gap: 10px;
+}
+.formSect form input {
+  padding: 14px;
+  background-color: #f8fafc;
+  border: 1px solid #ced8e4;
+  border-radius: 8px;
+}
+.formSect form .sumbitBtn {
+  background-color: #0066ff;
+  color: white;
+  padding: 18px;
+  box-shadow: 1px 2px 6px 2px rgba(0, 102, 255, 0.2784313725);
+  transition: 0.2s;
+  font-weight: 600;
+  margin-top: 25px;
+}
+.formSect form .sumbitBtn:hover {
+  cursor: pointer;
+  position: relative;
+  bottom: 2px;
+  background-color: #1f77fb;
+  box-shadow: 1px 4px 5px 3px rgba(0, 102, 255, 0.3254901961);
+}
+.formSect .dividerDiv {
+  height: 1px;
+  width: 65%;
+  background-color: rgba(206, 216, 228, 0.8745098039);
+}
+.formSect .resendDiv {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+  align-items: center;
+}
+.formSect .resendDiv p {
+  color: #515e71;
+  font-size: 15px;
+}
+.formSect .resendDiv button {
+  color: #0066ff;
+  border: none;
+  font-weight: 600;
+  background-color: transparent;
+  font-size: 15px;
+  transition: 0.3s;
+}
+.formSect .resendDiv button:hover {
+  cursor: pointer;
+  color: rgb(73, 143, 248);
+}
+.formSect .backToLoginBtn button {
+  color: #515e71;
+  border: none;
+  background-color: transparent;
+  font-size: 15px;
+  transition: 0.3s;
+}
+.formSect .backToLoginBtn button:hover {
+  cursor: pointer;
+  color: rgb(73, 143, 248);
+}
+
+@media (max-width: 1024px) {
+  .asideSect {
+    display: none;
+  }
+  .formSect {
+    width: 100%;
+  }
+  .formSect form {
+    width: 50%;
+  }
+}
+@media (max-width: 768px) {
+  .topDiv h2 {
+    font-size: 35px !important;
+  }
+  .topDiv p {
+    width: 80%;
+  }
+  form {
+    width: 70% !important;
+  }
+}
+
+/*# sourceMappingURL=verification.css.map */

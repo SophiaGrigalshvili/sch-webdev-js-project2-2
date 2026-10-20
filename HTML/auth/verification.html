@@ -4,21 +4,95 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Verify</title>
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="/CSS/pages/registration/verification.css" />
   </head>
   <body>
-    <form action="" id="verifForm">
-      <input type="email" name="" id="verifEmail" placeholder="Enter Email" />
-      <input
-        type="text"
-        name=""
-        id="verifCode"
-        placeholder="Enter 6-digit Code"
-      />
-      <input type="submit" name="" id="" value="Verify Email" />
-    </form>
+    <section class="asideSect">
+      <div class="titles">
+        <div>
+          <i class="fa fa-regular fa-building"></i>
+        </div>
+        <h2>Almost There!</h2>
+        <p>
+          Just one more step to unlock exclusive hotel deals and start booking.
+        </p>
+      </div>
 
-    <button id="resend">Resend Code</button>
+      <div class="info">
+        <div>
+          <div class="iconDiv">
+            <i class="fa fa-solid fa-shield"></i>
+          </div>
+          <div class="textDiv">
+            <h3>Secure Account</h3>
+            <p>Your account security is our priority</p>
+          </div>
+        </div>
+
+        <div>
+          <div class="iconDiv">
+            <i class="fa fa-solid fa-check"></i>
+          </div>
+          <div class="textDiv">
+            <h3>Quick Process</h3>
+            <p>Verification takes less than a minute</p>
+          </div>
+        </div>
+
+        <div>
+          <div class="iconDiv">
+            <i class="fa fa-solid fa-users"></i>
+          </div>
+          <div class="textDiv">
+            <h3>Join the Community</h3>
+            <p>50,000+ verified travelers</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="formSect">
+      <div class="iconDiv">
+        <i class="fa fa-regular fa-envelope"></i>
+      </div>
+
+      <div class="topDiv">
+        <h2>Verify Your Email</h2>
+        <p>We've sent a 6-digit code to your email address</p>
+      </div>
+
+      <form action="" id="verifForm">
+        <input type="email" name="" id="verifEmail" placeholder="Enter Email" />
+        <input
+          type="text"
+          name=""
+          id="verifCode"
+          placeholder="Enter 6-digit Code"
+        />
+        <input
+          type="submit"
+          name=""
+          id=""
+          class="sumbitBtn"
+          value="Verify Email"
+        />
+      </form>
+
+      <div class="dividerDiv"></div>
+
+      <div class="resendDiv">
+        <p>Didn't receive the code?</p>
+        <button id="resend">Resend Code</button>
+      </div>
+
+      <a href="/HTML/auth/signin.html" class="backToLoginBtn"
+        ><button>← Back To Login</button></a
+      >
+    </section>
   </body>
   <script type="module" src="/JS/AUTH/VERIFY.js"></script>
 </html>
