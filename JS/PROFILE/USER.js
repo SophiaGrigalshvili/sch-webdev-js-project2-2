@@ -123,6 +123,8 @@ async function getUser() {
         console.log("user info edit error:", error);
       }
       console.log(userData);
+
+      window.location.reload();
     });
 
     //change inputs depending on if there is info

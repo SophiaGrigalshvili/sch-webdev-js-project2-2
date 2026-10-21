@@ -1,0 +1,350 @@
+main {
+  padding: 60px 6%;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  font-family: sans-serif;
+}
+
+.photoSect {
+  display: flex;
+  gap: 10px;
+  padding: 40px 0;
+}
+.photoSect .thumbnail {
+  width: 90%;
+  background-color: #f1f5f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 33vw;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.photoSect .thumbnail img {
+  height: 100%;
+}
+.photoSect .gridDiv {
+  display: grid;
+  gap: 10px;
+  width: 10%;
+  height: 33vw;
+  grid-template-rows: repeat(6, 16.6%);
+}
+.photoSect .gridDiv img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  border: 2px solid transparent;
+}
+.photoSect .gridDiv img:hover {
+  cursor: pointer;
+  border: 2px solid #0c6dff;
+}
+
+.lightBox {
+  position: absolute;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.827);
+  z-index: 1000;
+  padding: 20px;
+}
+.lightBox button {
+  align-self: end;
+  padding: 9px;
+  width: 40px;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.176);
+  cursor: pointer;
+  border: none;
+  border-radius: 50px;
+}
+.lightBox button:hover {
+  background-color: rgba(255, 255, 255, 0.272);
+}
+.lightBox img {
+  margin-top: 2vw;
+  margin-right: 2vw;
+  align-self: center;
+  justify-self: center;
+  height: auto;
+  width: 55%;
+  border-radius: 20px;
+}
+
+#backToHotelBtn {
+  width: fit-content;
+  background-color: transparent;
+  border: none;
+  color: #0c6dff;
+  transition: 0.3s;
+  font-size: 16px;
+}
+#backToHotelBtn:hover {
+  cursor: pointer;
+  color: #4f96ff;
+}
+
+.infoPage {
+  display: flex;
+  position: relative;
+}
+.infoPage aside {
+  width: 350px;
+  background-color: white;
+  border-radius: 10px;
+  border: 1px solid #f8fafc;
+  box-shadow: 1px 1px 8px 4px rgba(0, 0, 0, 0.106);
+  position: sticky;
+  top: 80px;
+  height: fit-content;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+}
+.infoPage aside .priceDiv {
+  display: flex;
+  gap: 3px;
+  align-items: end;
+}
+.infoPage aside .priceDiv h3 {
+  color: #1e293b;
+  font-weight: 600;
+  font-size: 30px;
+}
+.infoPage aside .priceDiv p {
+  color: #6b7686;
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+.infoPage aside button {
+  background-color: #0c6dff;
+  color: white;
+  padding: 16px;
+  border: none;
+  border-radius: 10px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.infoPage aside button:hover {
+  background-color: #4f96ff;
+  box-shadow: 1px 1px 10px 3px rgba(12, 109, 255, 0.1764705882);
+}
+.infoPage .actualInfo {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-right: 20px;
+}
+.infoPage .actualInfo .roomTitleSect {
+  display: flex;
+  justify-content: space-between;
+}
+.infoPage .actualInfo .roomTitleSect .isAvailable {
+  height: fit-content;
+  padding: 5px 14px;
+  border-radius: 15px;
+}
+.infoPage .actualInfo .roomTitleSect .titles {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.infoPage .actualInfo .roomTitleSect .titles h3 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #1e293b;
+}
+.infoPage .actualInfo .roomTitleSect .titles p {
+  color: #6b7686;
+  font-size: 15px;
+}
+.infoPage .actualInfo .roomGenInfo {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #f8fafc;
+  align-items: center;
+  justify-content: baseline;
+  border-radius: 20px;
+  padding: 16px 30px;
+  gap: 10px;
+  row-gap: 17px;
+}
+.infoPage .actualInfo .roomGenInfo > div {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+}
+.infoPage .actualInfo .roomGenInfo > div p {
+  font-size: 14px;
+  color: #6b7686;
+}
+.infoPage .actualInfo .roomGenInfo > div > div {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+.infoPage .actualInfo .roomGenInfo > div h4 {
+  color: #1e293b;
+}
+.infoPage .actualInfo .roomGenInfo > div i {
+  color: #f59e0b;
+}
+.infoPage .actualInfo .specificationsSect {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.infoPage .actualInfo .specificationsSect h3 {
+  font-size: 23px;
+  font-weight: 700;
+  color: #1e293b;
+}
+.infoPage .actualInfo .specificationsSect .specDivsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.infoPage .actualInfo .specificationsSect .specDivsContainer .specification {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f8fafc;
+  padding: 14px;
+  border-radius: 9px;
+}
+.infoPage .actualInfo .specificationsSect .specDivsContainer .specification p {
+  color: #6b7686;
+}
+.infoPage .actualInfo .specificationsSect .specDivsContainer .specification h4 {
+  color: #1e293b;
+}
+
+.reviewsSect {
+  display: flex;
+  flex-direction: column;
+}
+.reviewsSect .revTitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.reviewsSect .revTitle h3 {
+  color: #1e293b;
+  font-size: 23px;
+  font-weight: 700;
+}
+.reviewsSect .revTitle button {
+  color: white;
+  background-color: #0c6dff;
+  border: none;
+  padding: 10px 27px;
+  border-radius: 9px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.reviewsSect .revTitle button:hover {
+  background-color: #4f96ff;
+  box-shadow: 1px 1px 8px 2px rgba(12, 109, 255, 0.1764705882);
+}
+.reviewsSect .reviewsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+.reviewsSect .reviewsContainer .review {
+  border: 1px solid #d8dbdd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-radius: 20px;
+}
+.reviewsSect .reviewsContainer .review .reviewer {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.reviewsSect .reviewsContainer .review .reviewer .userPic {
+  height: 35px;
+  width: 35px;
+  background-color: #dee2e7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  color: #1e293b;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.reviewsSect .reviewsContainer .review .reviewer .userInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.reviewsSect .reviewsContainer .review .reviewer .userInfo .userName {
+  font-weight: 600;
+  color: #1e293b;
+}
+.reviewsSect .reviewsContainer .review .reviewer .userInfo .date {
+  color: #6b7686;
+}
+.reviewsSect .reviewsContainer .review .revRating {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+.reviewsSect .reviewsContainer .review .revRating i {
+  color: #f59e0b;
+}
+.reviewsSect .reviewsContainer .review .revRating p {
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.mobileVer {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .mobileVer {
+    display: flex;
+  }
+  .desktopVer {
+    display: none;
+  }
+  .photoSect {
+    flex-direction: column;
+  }
+  .photoSect .gridDiv {
+    display: grid;
+    gap: 10px;
+    width: 100%;
+    height: 80px;
+    grid-template-columns: repeat(6, 16.6%);
+    grid-template-rows: repeat(1, 80px) !important;
+  }
+  .infoPage {
+    flex-direction: column;
+  }
+  aside {
+    margin: 30px 0;
+    box-shadow: none !important;
+    border: 1px solid #e4e6e7 !important;
+    width: 100% !important;
+  }
+}
+
+/*# sourceMappingURL=rooms.css.map */

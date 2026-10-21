@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rooms</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="/CSS/pages/main.css" />
+    <link rel="stylesheet" href="/CSS/pages/rooms.css" />
+  </head>
+  <body>
+    <header>
+      <a href="/HTML/index.html">
+        <div>
+          <i class="fa fa-solid fa-suitcase"></i>
+        </div>
+        <h2>STEP BOOKING</h2>
+      </a>
+
+      <div class="nav" id="loggedOut">
+        <a href="/HTML/auth/signin.html">
+          <button class="signInBtn">Sign In</button>
+        </a>
+
+        <button class="burger" id="burgerMenu">
+          <i class="fa fa-solid fa-bars"></i>
+        </button>
+
+        <nav class="navInactive" id="respNavMenu">
+          <a href="/HTML/index.html"><button>Home</button></a>
+          <div class="dividerDiv"></div>
+          <a href="/HTML/auth/signin.html"><button>Sign In</button></a>
+          <a href="/HTML/auth/signup.html"><button>Register</button></a>
+        </nav>
+      </div>
+
+      <div class="nav" id="loggedIn">
+        <a href="/HTML/profile/user.html">
+          <button class="userPage" id="userPfpCont">
+            <p id="userPfp"></p>
+          </button>
+        </a>
+
+        <button class="burger" id="burgerMenuLoggedIn">
+          <i class="fa fa-solid fa-bars"></i>
+        </button>
+
+        <nav class="navInactive" id="respNavMenuLoggedIn">
+          <a href="/HTML/index.html"><button>Home</button></a>
+          <div class="dividerDiv"></div>
+          <a href="/HTML/profile/user.html"><button>Sign In</button></a>
+          <a href="/HTML/profile/reservations.html"
+            ><button>Register</button></a
+          >
+          <button id="logoutBtn" class="logoutBtn">Log Out</button>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="photoSect">
+        <div class="thumbnail">
+          <img src="" alt="thumbnail image" id="thumbnail" />
+        </div>
+        <div class="gridDiv">
+          <img src="" alt="photo 1" id="photo1" />
+          <img src="" alt="photo 2" id="photo2" />
+          <img src="" alt="photo 3" id="photo3" />
+        </div>
+      </section>
+
+      <section class="infoPage">
+        <section class="actualInfo">
+          <button onclick="history.back()" id="backToHotelBtn"></button>
+
+          <section class="roomTitleSect">
+            <div class="titles">
+              <h3 id="roomName"></h3>
+              <p>Room #<span id="roomNumber"></span></p>
+            </div>
+
+            <div class="isAvailable" id="isAvailableDiv">
+              <p id="isAvailableTxt"></p>
+            </div>
+          </section>
+
+          <section class="roomGenInfo">
+            <div class="capaity">
+              <p>CAPACITY</p>
+              <h4 id="roomCapacity"></h4>
+            </div>
+
+            <div class="beds">
+              <p>BEDS</p>
+              <h4 id="roomBeds"></h4>
+            </div>
+
+            <div class="roomRating">
+              <p>Rating</p>
+              <div class="ratingDiv">
+                <i class="fa fa-solid fa-star"></i>
+                <h4 id="roomRating"></h4>
+              </div>
+            </div>
+
+            <div class="roomReviewsAmount">
+              <p>Reviews</p>
+              <h4 id="reviewsAmount"></h4>
+            </div>
+          </section>
+
+          <section class="specificationsSect">
+            <h3>Specifications</h3>
+
+            <div class="specDivsContainer" id="specDivsContainer"></div>
+          </section>
+
+          <section class="reviewsSect desktopVer">
+            <div class="revTitle">
+              <h3>Reviews</h3>
+              <button id="reviewBtn"></button>
+            </div>
+
+            <div class="reviewsContainer" id="reviewsContainer"></div>
+          </section>
+        </section>
+
+        <aside>
+          <div class="priceDiv">
+            <h3 id="roomPrice"></h3>
+            <p>/ night</p>
+          </div>
+
+          <button id="bookBtn"></button>
+        </aside>
+      </section>
+      
+      <section class="reviewsSect mobileVer">
+        <div class="revTitle">
+          <h3>Reviews</h3>
+          <button id="reviewBtnMob"></button>
+        </div>
+
+        <div class="reviewsContainer" id="reviewsContainerMobileVer">
+          <!-- <div class="review">
+            <div class="reviewer">
+              <p class="userPic"></p>
+              <div class="userInfo">
+                <p class="userName"></p>
+                <p class="date"></p>
+              </div>
+            </div>
+            <div class="revRating">
+              <i class="fa fa-solid fa-star"></i>
+              <p class="rating"></p>
+            </div>
+          </div> -->
+        </div>
+      </section>
+    </main>
+  </body>
+  <script type="module" src="/JS/PRODUCTS/ROOMS.js"></script>
+  <script type="module" src="/JS/HEADERLOAD.js"></script>
+</html>

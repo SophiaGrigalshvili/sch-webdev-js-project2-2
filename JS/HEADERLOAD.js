@@ -27,7 +27,7 @@ if (localStorage.getItem("accessToken")) {
   logoutBtn.addEventListener("click", () => {
     localStorage.clear();
 
-    window.location.reload();
+    window.location.href = "/HTML/index.html";
   });
 } else {
   const burgerBtn = document.getElementById("burgerMenu");
@@ -51,6 +51,8 @@ async function getUser() {
 
     if (!respose.ok) {
       localStorage.clear();
+      window.location.reload();
+
       throw new Error("error in response");
     }
     const data = await respose.json();

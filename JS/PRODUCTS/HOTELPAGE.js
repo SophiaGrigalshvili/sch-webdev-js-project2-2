@@ -3,8 +3,6 @@ import { X_API_KEY, BASE_URL } from "../API.js";
 const params = new URLSearchParams(window.location.search);
 const paramid = params.get("id");
 
-console.log(paramid);
-
 fetch(`${BASE_URL}/api/hotels/${paramid}`)
   .then((res) => {
     if (!res.ok) {
@@ -14,8 +12,6 @@ fetch(`${BASE_URL}/api/hotels/${paramid}`)
   })
   .then((data) => {
     const hotel = data.data;
-
-    console.log(`hotel info:`, hotel);
 
     appendHotInfo(hotel);
     // getRooms();
@@ -109,7 +105,6 @@ fetch(`${BASE_URL}/api/rooms/${paramid}`)
   })
   .then((data) => {
     const rooms = data.data.items;
-    console.log(`rooms:`, rooms);
     displayRooms(rooms);
   });
 
