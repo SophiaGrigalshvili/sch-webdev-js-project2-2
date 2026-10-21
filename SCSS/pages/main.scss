@@ -47,28 +47,72 @@ header {
     }
   }
 
-  .burgMenu {
+  .nav {
     display: flex;
 
     gap: 20px;
     align-items: center;
-
-    .signInBtn {
-      border: none;
-      background-color: #0e6eff;
-      padding: 9px 22px;
-      border-radius: 5px;
-      position: relative;
-
-      transition: 0.5s;
-      a {
+    a {
+      text-decoration: none;
+      .signInBtn {
+        border: none;
+        background-color: #0e6eff;
+        padding: 9px 22px;
+        border-radius: 5px;
+        position: relative;
         color: white;
-        text-decoration: none;
+        transition: 0.5s;
+
+        &:hover {
+          cursor: pointer;
+          bottom: 1px;
+          background-color: #2d7ef9;
+        }
       }
 
-      &:hover {
-        bottom: 1px;
-        background-color: #2d7ef9;
+      .userPage {
+        height: 43px;
+        width: 43px;
+        background-color: transparent;
+        border: 1px solid #e2e8f0;
+        border-radius: 100%;
+
+        cursor: pointer;
+        transition: 0.3s;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:hover {
+          border: 1px solid #0e6eff;
+          background-color: #0e6eff11;
+        }
+
+        p {
+          background-color: #0e6eff;
+          height: 33px;
+          width: 33px;
+          border-radius: 100%;
+
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          color: white;
+
+          text-transform: uppercase;
+          font-size: 14px;
+          font-weight: 700;
+        }
+
+        img {
+          height: 33px;
+          width: 33px;
+          border-radius: 100%;
+
+          object-fit: cover;
+        }
       }
     }
 
@@ -80,6 +124,103 @@ header {
       color: #1e293b;
 
       display: none;
+    }
+
+    nav {
+      height: 100%;
+      width: 100%;
+
+      position: absolute;
+      position: fixed;
+      top: 56px;
+      left: 0;
+
+      background-color: rgba(255, 255, 255, 0.967);
+
+      display: flex;
+      flex-direction: column;
+      row-gap: 10px;
+
+      padding: 6%;
+
+      transition: 0.4s;
+      a {
+        text-decoration: none;
+        button {
+          text-align: start;
+          width: 100%;
+          background-color: transparent;
+          border: none;
+          padding: 20px;
+
+          transition: 0.2s;
+          border-radius: 15px;
+
+          cursor: pointer;
+
+          &:hover {
+            background-color: #0e6eff07;
+            color: #0e6eff;
+          }
+        }
+      }
+
+      .logoutBtn {
+        text-align: start;
+        width: 100%;
+        background-color: transparent;
+        border: none;
+        padding: 20px;
+
+        transition: 0.2s;
+        border-radius: 15px;
+
+        cursor: pointer;
+        &:hover {
+          background-color: #ef444407;
+          color: #ef4444;
+        }
+      }
+
+      .dividerDiv {
+        background-color: #e2e8f0;
+        height: 1px;
+      }
+    }
+
+    .navInactive {
+      opacity: 0%;
+
+      display: none;
+    }
+  }
+}
+
+#loggedIn {
+  display: none;
+}
+@media (max-width: 1024px) {
+  header {
+    .nav {
+      .burger {
+        display: flex;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    .nav {
+      a {
+        .userPage {
+          display: none;
+        }
+      }
+
+      .signInBtn {
+        display: none;
+      }
     }
   }
 }

@@ -6,6 +6,54 @@
     <title>Settings</title>
   </head>
   <body>
+    <header>
+      <a href="/HTML/index.html">
+        <div>
+          <i class="fa fa-solid fa-suitcase"></i>
+        </div>
+        <h2>STEP BOOKING</h2>
+      </a>
+
+      <div class="nav" id="loggedOut">
+        <a href="/HTML/auth/signin.html">
+          <button class="signInBtn">Sign In</button>
+        </a>
+
+        <button class="burger" id="burgerMenu">
+          <i class="fa fa-solid fa-bars"></i>
+        </button>
+
+        <nav class="navInactive" id="respNavMenu">
+          <a href="/HTML/index.html"><button>Home</button></a>
+          <div class="dividerDiv"></div>
+          <a href="/HTML/auth/signin.html"><button>Sign In</button></a>
+          <a href="/HTML/auth/signup.html"><button>Register</button></a>
+        </nav>
+      </div>
+
+      <div class="nav" id="loggedIn">
+        <a href="/HTML/profile/user.html">
+          <button class="userPage" id="userPfpCont">
+            <p id="userPfp"></p>
+          </button>
+        </a>
+
+        <button class="burger" id="burgerMenuLoggedIn">
+          <i class="fa fa-solid fa-bars"></i>
+        </button>
+
+        <nav class="navInactive" id="respNavMenuLoggedIn">
+          <a href="/HTML/index.html"><button>Home</button></a>
+          <div class="dividerDiv"></div>
+          <a href="/HTML/profile/user.html"><button>Sign In</button></a>
+          <a href="/HTML/profile/reservations.html"
+            ><button>Register</button></a
+          >
+          <button id="logoutBtn" class="logoutBtn">Log Out</button>
+        </nav>
+      </div>
+    </header>
+
     <!-- INPUT ASIDE FROM USER PAGE -->
     <form action="" id="resetPsword">
       <input
@@ -32,4 +80,5 @@
     <button id="deleteUser">Delete Account</button>
   </body>
   <script type="module" src="/JS/PROFILE/USERSETTINGS.js"></script>
+  <script type="module" src="/JS/HEADERLOAD.js"></script>
 </html>

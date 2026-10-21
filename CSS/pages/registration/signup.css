@@ -113,7 +113,7 @@ body {
   box-shadow: 1px 1px 5px 1px rgba(180, 210, 253, 0.4352941176);
   font-size: 30px;
   font-weight: 100;
-  padding: 10px;
+  padding: 10px 17px;
   border-radius: 14px;
   transition: 0.2s;
 }

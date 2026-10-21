@@ -42,34 +42,141 @@ header > a > div {
 header > a > div i {
   color: white;
 }
-header .burgMenu {
+header .nav {
   display: flex;
   gap: 20px;
   align-items: center;
 }
-header .burgMenu .signInBtn {
+header .nav a {
+  text-decoration: none;
+}
+header .nav a .signInBtn {
   border: none;
   background-color: #0e6eff;
   padding: 9px 22px;
   border-radius: 5px;
   position: relative;
+  color: white;
   transition: 0.5s;
 }
-header .burgMenu .signInBtn a {
-  color: white;
-  text-decoration: none;
-}
-header .burgMenu .signInBtn:hover {
+header .nav a .signInBtn:hover {
+  cursor: pointer;
   bottom: 1px;
   background-color: #2d7ef9;
 }
-header .burgMenu .burger {
+header .nav a .userPage {
+  height: 43px;
+  width: 43px;
+  background-color: transparent;
+  border: 1px solid #e2e8f0;
+  border-radius: 100%;
+  cursor: pointer;
+  transition: 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .nav a .userPage:hover {
+  border: 1px solid #0e6eff;
+  background-color: rgba(14, 110, 255, 0.0666666667);
+}
+header .nav a .userPage p {
+  background-color: #0e6eff;
+  height: 33px;
+  width: 33px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 700;
+}
+header .nav a .userPage img {
+  height: 33px;
+  width: 33px;
+  border-radius: 100%;
+  object-fit: cover;
+}
+header .nav .burger {
   background-color: transparent;
   border: none;
   cursor: pointer;
   font-size: 27px;
   color: #1e293b;
   display: none;
+}
+header .nav nav {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  position: fixed;
+  top: 56px;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.967);
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  padding: 6%;
+  transition: 0.4s;
+}
+header .nav nav a {
+  text-decoration: none;
+}
+header .nav nav a button {
+  text-align: start;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  padding: 20px;
+  transition: 0.2s;
+  border-radius: 15px;
+  cursor: pointer;
+}
+header .nav nav a button:hover {
+  background-color: rgba(14, 110, 255, 0.0274509804);
+  color: #0e6eff;
+}
+header .nav nav .logoutBtn {
+  text-align: start;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  padding: 20px;
+  transition: 0.2s;
+  border-radius: 15px;
+  cursor: pointer;
+}
+header .nav nav .logoutBtn:hover {
+  background-color: rgba(239, 68, 68, 0.0274509804);
+  color: #ef4444;
+}
+header .nav nav .dividerDiv {
+  background-color: #e2e8f0;
+  height: 1px;
+}
+header .nav .navInactive {
+  opacity: 0%;
+  display: none;
+}
+
+#loggedIn {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  header .nav .burger {
+    display: flex;
+  }
+}
+@media (max-width: 768px) {
+  header .nav a .userPage {
+    display: none;
+  }
+  header .nav .signInBtn {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

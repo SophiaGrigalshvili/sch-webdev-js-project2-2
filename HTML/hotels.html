@@ -13,7 +13,7 @@
   </head>
   <body>
     <header>
-      <a href="index.html">
+      <a href="/HTML/index.html">
         <div>
           <i class="fa fa-solid fa-suitcase"></i>
         </div>
@@ -21,15 +21,42 @@
       </a>
 
       <div class="nav" id="loggedOut">
-        <div class="burgMenu">
-          <button class="signInBtn">
-            <a href="/HTML/auth/signup.html">Sign In</a>
-          </button>
+        <a href="/HTML/auth/signin.html">
+          <button class="signInBtn">Sign In</button>
+        </a>
 
-          <button class="burger">
-            <i class="fa fa-solid fa-bars"></i>
+        <button class="burger" id="burgerMenu">
+          <i class="fa fa-solid fa-bars"></i>
+        </button>
+
+        <nav class="navInactive" id="respNavMenu">
+          <a href="/HTML/index.html"><button>Home</button></a>
+          <div class="dividerDiv"></div>
+          <a href="/HTML/auth/signin.html"><button>Sign In</button></a>
+          <a href="/HTML/auth/signup.html"><button>Register</button></a>
+        </nav>
+      </div>
+
+      <div class="nav" id="loggedIn">
+        <a href="/HTML/profile/user.html">
+          <button class="userPage" id="userPfpCont">
+            <p id="userPfp"></p>
           </button>
-        </div>
+        </a>
+
+        <button class="burger" id="burgerMenuLoggedIn">
+          <i class="fa fa-solid fa-bars"></i>
+        </button>
+
+        <nav class="navInactive" id="respNavMenuLoggedIn">
+          <a href="/HTML/index.html"><button>Home</button></a>
+          <div class="dividerDiv"></div>
+          <a href="/HTML/profile/user.html"><button>Sign In</button></a>
+          <a href="/HTML/profile/reservations.html"
+            ><button>Register</button></a
+          >
+          <button id="logoutBtn" class="logoutBtn">Log Out</button>
+        </nav>
       </div>
     </header>
 
@@ -110,4 +137,5 @@
     </main>
   </body>
   <script type="module" src="/JS/PRODUCTS/HOTELPAGE.js"></script>
+  <script type="module" src="/JS/HEADERLOAD.js"></script>
 </html>
